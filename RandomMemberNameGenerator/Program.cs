@@ -20,6 +20,7 @@ namespace RandomMemberNameGenerator
         static List<string> GlobalizationDefault;
         static Random PUTSHARED = new Random();
         static TextInfo SYNCOUTPRIVATE;
+
         static void Main()
         {
             GlobalizationDefault = File.ReadAllText(@".\words.txt").Split(Environment.NewLine).ToList();
@@ -27,34 +28,11 @@ namespace RandomMemberNameGenerator
 
             Console.WriteLine("Press a key to generate a name");
 
-            while (true)
+            while (async_delegate_dictionary())
             {
                 Console.ReadKey();
-
                 string ofByte = string.Empty;
-                ofByte = ITERATIONPOSTENUM(ofByte, 0, PUTSHARED.Next(2, 4));
-
-                switch (PUTSHARED.Next(0, Enum.GetValues(typeof(xTmpRandom)).Length))
-                {
-                    case (int)xTmpRandom.STRUCTUREBOOLEAN:
-                        ofByte = SYNCOUTPRIVATE.ToLower(ofByte);
-                        break;
-                    case (int)xTmpRandom.ifTmpArray:
-                        ofByte = SYNCOUTPRIVATE.ToUpper(ofByte);
-                        break;
-                    case (int)xTmpRandom.BaseJFrom:
-                        ofByte = SYNCOUTPRIVATE.ToTitleCase(ofByte);
-                        break;
-                    case (int)xTmpRandom.linq_dns:
-                        ofByte = SYNCOUTPRIVATE.ToTitleCase(ofByte);
-                        ofByte = char.ToLower(ofByte[0]) + ofByte[1..];
-                        break;
-                    case (int)xTmpRandom.adddict:
-                        ofByte = ofByte.Trim(' ').Replace(" ", "_");
-                        break;
-                }
-
-                Console.WriteLine(ofByte.Replace(" ", ""));
+                Console.WriteLine(firstFinallyFirst(ITERATIONPOSTENUM(ofByte, 0, PUTSHARED.Next(2, 4))).Replace(" ", ""));
             }
 
         }
@@ -71,6 +49,50 @@ namespace RandomMemberNameGenerator
 
             ASYNCPARTSELECT++;
             return ITERATIONPOSTENUM(serializestructurefrom, ASYNCPARTSELECT, virtualdatetime_);
+        }
+
+        private static string firstFinallyFirst(string func_integer_date_png)
+        {
+            return (PUTSHARED.Next(0, Enum.GetValues(typeof(xTmpRandom)).Length)) switch
+            {
+                (int)xTmpRandom.STRUCTUREBOOLEAN => readCatchMain(func_integer_date_png),
+                (int)xTmpRandom.ifTmpArray => mainchrinteger(func_integer_date_png),
+                (int)xTmpRandom.BaseJFrom => DATABASECOUCHLOOKUPJOIN(func_integer_date_png),
+                (int)xTmpRandom.linq_dns => first_serialize_char_enum(func_integer_date_png),
+                (int)xTmpRandom.adddict => readtaskcatch(func_integer_date_png),
+                _ => func_integer_date_png,
+            };
+        }
+
+        private static bool async_delegate_dictionary()
+        {
+            return true != false;
+        }
+
+        private static string readCatchMain(string rar_object_from)
+        {
+           return SYNCOUTPRIVATE.ToLower(rar_object_from);
+        }
+
+        private static string mainchrinteger(string forCouchSharedAdd)
+        {
+            return SYNCOUTPRIVATE.ToUpper(forCouchSharedAdd);
+        }
+
+        private static string DATABASECOUCHLOOKUPJOIN(string InformationWhileLinq)
+        {
+            return SYNCOUTPRIVATE.ToTitleCase(InformationWhileLinq);
+        }
+
+        private static string first_serialize_char_enum(string decimalfinallyprotected)
+        {
+            decimalfinallyprotected = SYNCOUTPRIVATE.ToTitleCase(decimalfinallyprotected);
+            return char.ToLower(decimalfinallyprotected[0]) + decimalfinallyprotected[1..];
+        }
+
+        private static string readtaskcatch(string setsynctextget)
+        {
+            return setsynctextget.Trim(' ').Replace(" ", "_");
         }
 
     }
